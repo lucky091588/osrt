@@ -27,6 +27,7 @@
 	<link href="bootstrap.css.html" rel="stylesheet" type="text/css" />
 	<link href="bootstrap-responsive.css" rel="stylesheet" type="text/css" />
 	<link href="https://www.osrt.org/modules/mod_bt_login/tmpl/css/style2.0.css" rel="stylesheet" type="text/css" />
+  <link href="http://localhost/osrt/menu-mobile.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
 
 	</style>
@@ -58,9 +59,14 @@
 							document.getElementById('captchaCode'+instanceNo).src = captchaSrc ;
 							//alert(document.getElementById('captchaCode'+instanceNo).src);
 						} 
-						jQuery(window).on('load',  function() {
+						
+jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});if (typeof RokBoxSettings == 'undefined') RokBoxSettings = {pc: '100'};window.addEvent((window.webkit) ? 'load' : 'domready', function() {
+			});
+if (typeof RokBoxSettings == 'undefined') RokBoxSettings = {pc: '100'};
+
+
+window.addEvent((window.webkit) ? 'load' : 'domready', function() {
 				window.rokajaxsearch = new RokAjaxSearch({
 					'results': 'Results',
 					'close': '',
@@ -93,7 +99,8 @@
 					'showreadmore': 0,
 					'showdescription': 0
 				});
-			});function fetchMoreLatestEvents(modid, direction)
+			});
+function fetchMoreLatestEvents(modid, direction)
 {        
         jQuery.ajax({
                     type : 'POST',
